@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 	lazyLoadImages('js__lazy-load');
+	lazyLoadFonts();
 });
 
 function lazyLoadImages(target) {
@@ -8,4 +9,16 @@ function lazyLoadImages(target) {
 		var dataSource = images[i].getAttribute('data-src');
 		images[i].setAttribute('src', dataSource);
 	}
+}
+
+function lazyLoadFonts() {
+	var url = 'https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer|Ramaraja';
+	var rel = 'stylesheet';
+
+	var fontsElement = document.createElement('link');
+	fontsElement.setAttribute('href', url);	
+	fontsElement.setAttribute('rel', rel);
+
+	document.getElementsByTagName('head')[0].appendChild(fontsElement);
+
 }
