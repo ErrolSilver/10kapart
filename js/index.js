@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-	// lazyLoadFonts();
-	// lazyLoadImages('js__lazy-load');
+	lazyLoadFonts();
+	lazyLoadImages('js__lazy-load');
 });
 
 function lazyLoadImages(target) {
